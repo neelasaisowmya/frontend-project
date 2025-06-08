@@ -1,0 +1,123 @@
+@tailwind base;
+
+@keyframes border-shimmer {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+@keyframes progress-shimmer {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes confetti-fade {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes pulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.5); }
+  50% { box-shadow: 0 0 0 4px rgba(239,68,68,0.2); }
+}
+
+.animate-border-shimmer {
+  animation: border-shimmer 2.5s linear infinite;
+}
+.animate-progress-shimmer, .progress-bar-gradient {
+  background: linear-gradient(90deg, #2874f0 0%, #06b6d4 100%);
+  border-radius: 9999px;
+  height: 8px;
+  transition: background 0.3s;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s cubic-bezier(.4,0,.2,1) both;
+}
+.animate-pulse {
+  animation: pulse 1.2s cubic-bezier(.4,0,.2,1) infinite;
+}
+.confetti-fade {
+  animation: confetti-fade 2.2s both;
+}
+
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #f8fafc;
+  color: #222;
+  margin: 0;
+  font-family: 'Inter', 'Roboto', 'ui-sans-serif', 'system-ui', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #ff69b4;
+  min-height: 100vh;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+  position: relative;
+  box-shadow: 0 0 0 2px #2874f0, 0 2px 8px 0 rgba(40,116,240,0.12);
+  border-color: #2874f0;
+}
+
+button {
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+button:hover, button:focus {
+  box-shadow: 0 4px 16px 0 rgba(40,116,240,0.12);
+  transform: scale(1.03);
+}
+
+.error-message {
+  background: #ffe4e6;
+  color: #b91c1c;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  margin-top: 0.25rem;
+  box-shadow: 0 1px 4px 0 rgba(185,28,28,0.08);
+  animation: fade-in 0.5s;
+}
+
+/* Selection color for a premium feel */
+::selection {
+  background: #a1c4fd;
+  color: #fff;
+}
+
+/* Link hover effect */
+a {
+  transition: color 0.2s, text-shadow 0.2s;
+}
+a:hover {
+  color: #ec4899;
+  text-shadow: 0 2px 8px #fbcfe8;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #e0f2fe;
+}
+::-webkit-scrollbar-thumb {
+  background: #bae6fd;
+  border-radius: 8px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', 'Montserrat', 'Inter', 'ui-sans-serif', 'system-ui';
+  color: #be185d;
+  letter-spacing: -0.01em;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
