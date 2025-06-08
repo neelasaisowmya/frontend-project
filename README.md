@@ -21,4 +21,5 @@ The app will run locally at http://localhost:3000.
 CopyInsert
 npm run build
 projects screenshots
-![Image Alt]("C:\Users\sahit\OneDrive\Pictures\Screenshots\Screenshot 2025-06-08 200855.png")
+![Screenshot 2025-06-08 200855](https://github.com/user-attachments/assets/e4b1ff37-ddf7-436b-bf2c-421a4ee9bcc9)
+
